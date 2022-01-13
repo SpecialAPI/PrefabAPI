@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2F4C7C3A-3F0C-408A-B39E-62E67E415B34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrefabAPI</RootNamespace>
+    <AssemblyName>PrefabAPI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\Documents\ModDependencies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp.Base.mm">
+      <HintPath>..\..\..\Documents\ModDependencies\Assembly-CSharp.Base.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\Documents\ModDependencies\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\..\Documents\ModDependencies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\..\..\Documents\ModDependencies\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>..\..\..\Documents\ModDependencies\MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>..\..\..\Documents\ModDependencies\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Documents\ModDependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>..\..\..\Documents\ModDependencies\PlayMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Base.mm">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.Base.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule.Base.mm">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.CoreModule.Base.mm.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\Documents\ModDependencies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRC.cs" />
+    <Compile Include="EditorAssetBundle.cs" />
+    <Compile Include="AssetBundleBuilder.cs" />
+    <Compile Include="AssetBundleTools.cs" />
+    <Compile Include="BinaryWriterExtensions.cs" />
+    <Compile Include="EditorBuildTarget.cs" />
+    <Compile Include="EditorClassIDType.cs" />
+    <Compile Include="CommonString.cs" />
+    <Compile Include="EditorComponent.cs" />
+    <Compile Include="EditorExtension.cs" />
+    <Compile Include="EditorPPtr.cs" />
+    <Compile Include="EndianBinaryWriter.cs" />
+    <Compile Include="Examples\ExampleModule.cs" />
+    <Compile Include="EditorGameObject.cs" />
+    <Compile Include="Examples\UrBadAtTheGameComponent.cs" />
+    <Compile Include="ICoder.cs" />
+    <Compile Include="LZ4Codec.cs" />
+    <Compile Include="LZ4\ILZ4Service.cs" />
+    <Compile Include="IMatchFinder.cs" />
+    <Compile Include="LZ4\LZ4Codec.cs" />
+    <Compile Include="LZ4\LZ4Codec.Safe.cs" />
+    <Compile Include="LZ4\LZ4Codec.Safe32.Dirty.cs" />
+    <Compile Include="LZ4\LZ4Codec.Safe32HC.Dirty.cs" />
+    <Compile Include="LZ4\LZ4Codec.Safe64.Dirty.cs" />
+    <Compile Include="LZ4\LZ4Codec.Safe64HC.Dirty.cs" />
+    <Compile Include="LZ4CodecPartial.cs" />
+    <Compile Include="LzBinTree.cs" />
+    <Compile Include="LzInWindow.cs" />
+    <Compile Include="LzmaBase.cs" />
+    <Compile Include="LzmaDecoder.cs" />
+    <Compile Include="LzmaEncoder.cs" />
+    <Compile Include="LzOutWindow.cs" />
+    <Compile Include="EditorNamedObject.cs" />
+    <Compile Include="EditorObject.cs" />
+    <Compile Include="PPtr.cs" />
+    <Compile Include="PrefabBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RangeCoder.cs" />
+    <Compile Include="RangeCoderBit.cs" />
+    <Compile Include="RangeCoderBitTree.cs" />
+    <Compile Include="Safe32LZ4Service.cs" />
+    <Compile Include="Safe64LZ4Service.cs" />
+    <Compile Include="SerializedType.cs" />
+    <Compile Include="SerializedTypeStorage.cs" />
+    <Compile Include="SevenZipHelper.cs" />
+    <Compile Include="EditorTextAsset.cs" />
+    <Compile Include="EditorTransform.cs" />
+    <Compile Include="TypeTreeNode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="prefabbundle" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
